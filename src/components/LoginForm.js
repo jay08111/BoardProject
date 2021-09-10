@@ -13,26 +13,45 @@ const useStyle = makeStyles((theme) => ({
     margin: "8rem auto",
     height: "70vh",
     width: "50vw",
+    [theme.breakpoints.down("xs")]: {
+      width: "80vw",
+      height: "80vh",
+      margin: "4.5rem auto",
+    },
   },
   background: {
     background: "linear-gradient(#96deda , #50c9c3)",
     height: "100vh",
     overflow: "hidden",
+    position: "relative",
+    [theme.breakpoints.down("xs")]: {},
   },
   loginBox: {
     width: "20vw",
     height: "60vh",
     margin: "1rem auto",
+    [theme.breakpoints.down("xs")]: {
+      width: "70vw",
+      display: "flex",
+      flexDirection: "column",
+    },
   },
   idInput: {
     marginTop: "30px",
     width: "18vw",
     borderRadius: "20px",
+    [theme.breakpoints.down("xs")]: {
+      width: "70vw",
+      height: "4vh",
+    },
   },
   passwordInput: {
     marginTop: "30px",
     width: "18vw",
     borderRadius: "20px",
+    [theme.breakpoints.down("xs")]: {
+      width: "70vw",
+    },
   },
   checkBox: {
     display: "flex",
@@ -49,6 +68,20 @@ const useStyle = makeStyles((theme) => ({
     flexDirection: "column",
     width: "17vw",
     margin: "2rem auto",
+    position: "relative",
+    [theme.breakpoints.down("xs")]: {
+      margin: "-2rem auto",
+      marginLeft: "1.2rem",
+    },
+  },
+  signUpBtn: {
+    margin: "8rem auto",
+    [theme.breakpoints.down("xs")]: {
+      display: "flex",
+      alignItems: "center",
+      flexDirection: "column",
+      justifyContent: "space-around",
+    },
   },
 }));
 function LoginForm() {
@@ -77,6 +110,7 @@ function LoginForm() {
                 <TextField
                   id="standard-basic"
                   label="비밀번호"
+                  type="password"
                   className={classes.passwordInput}
                 />
                 <Box className={classes.checkBox}>
@@ -95,10 +129,12 @@ function LoginForm() {
                     <FacebookIcon className="facebookicon" /> 페이스북 로그인
                   </button>
                 </Box>
-                <div className="underline"></div>
-                <button type="submit" className="signup-btn">
-                  회원가입
-                </button>
+                <Box className={classes.signUpBtn}>
+                  <div className="underline"></div>
+                  <button type="submit" className="signup-btn">
+                    회원가입
+                  </button>
+                </Box>
               </Box>
             </section>
           </Wrapper>
@@ -148,21 +184,24 @@ const Wrapper = styled.article`
     border: none;
     width: 17vw;
     border-radius: 20px;
-    padding: 10px;
+    padding: 8px;
     margin-top: 2rem;
     color: #fff;
     background-color: #ea4335;
     cursor: pointer;
+    position: relative;
   }
   .facebook-btn {
     border: none;
     width: 17vw;
     border-radius: 20px;
-    padding: 10px;
+    padding: 8px;
     margin-top: 2rem;
     background-color: #3b5998;
     color: #fff;
     cursor: pointer;
+    position: absolute;
+    top: 50px;
   }
   .signup-btn {
     border: none;
@@ -173,9 +212,9 @@ const Wrapper = styled.article`
     cursor: pointer;
   }
   .underline {
-    width: 19vw;
+    width: 18vw;
     height: 0.075rem;
-    background-color: #fbe3e3;
+    background-color: #000;
     margin: auto;
     padding: 0;
   }
@@ -183,9 +222,49 @@ const Wrapper = styled.article`
     font-size: 1.1rem;
     margin-right: 2px;
     margin-top: 1px;
+    position: absolute;
+    left: 30%;
+    top: 17%;
   }
   .googleicon {
     font-size: 1.1rem;
+    position: absolute;
+    left: 35%;
+    top: 17%;
+  }
+  @media screen and (max-width: 767px) {
+    .left {
+      display: none;
+    }
+    .login-btn {
+      margin: 1.2rem auto;
+      width: 60vw;
+    }
+    .goggle-btn {
+      width: 60vw;
+    }
+    .facebook-btn {
+      width: 60vw;
+    }
+    .underline {
+      margin: -1rem auto;
+      width: 70vw;
+      position: absolute;
+      top: 83%;
+    }
+    .signup-btn {
+      width: 30vw;
+      position: absolute;
+      top: 78%;
+    }
+    .facebookicon {
+      left: 22%;
+      top: 17%;
+    }
+    .googleicon {
+      left: 27%;
+      top: 17%;
+    }
   }
 `;
 export default LoginForm;
