@@ -18,6 +18,10 @@ const useStyle = makeStyles((theme) => ({
       height: "80vh",
       margin: "4.5rem auto",
     },
+    "@media screen and (max-width : 320px)": {
+      height: "85vh",
+      margin: "3rem auto",
+    },
   },
   background: {
     background: "linear-gradient(#96deda , #50c9c3)",
@@ -69,6 +73,7 @@ const useStyle = makeStyles((theme) => ({
     width: "17vw",
     margin: "2rem auto",
     position: "relative",
+
     [theme.breakpoints.down("xs")]: {
       margin: "-2rem auto",
       marginLeft: "1.2rem",
@@ -166,15 +171,11 @@ const Wrapper = styled.article`
     text-align: center;
     margin-top: 12px;
   }
-  .login-button {
-    width: 17vw;
-    margin-top: 2rem;
-  }
   .login-btn {
     border: none;
     width: 17vw;
     border-radius: 20px;
-    padding: 10px;
+    padding: 0.55rem;
     margin-top: 2rem;
     background-color: #8a75ff;
     color: #fff;
@@ -184,7 +185,7 @@ const Wrapper = styled.article`
     border: none;
     width: 17vw;
     border-radius: 20px;
-    padding: 8px;
+    padding: 0.55rem;
     margin-top: 2rem;
     color: #fff;
     background-color: #ea4335;
@@ -195,7 +196,7 @@ const Wrapper = styled.article`
     border: none;
     width: 17vw;
     border-radius: 20px;
-    padding: 8px;
+    padding: 0.55rem;
     margin-top: 2rem;
     background-color: #3b5998;
     color: #fff;
@@ -232,6 +233,40 @@ const Wrapper = styled.article`
     left: 35%;
     top: 17%;
   }
+  @media screen and (max-width: 769px) {
+    .left {
+      display: none;
+    }
+    .login-btn {
+      margin: 1.2rem auto;
+      width: 60vw;
+    }
+    .goggle-btn {
+      width: 60vw;
+    }
+    .facebook-btn {
+      width: 60vw;
+    }
+    .underline {
+      margin: -1rem auto;
+      width: 70vw;
+      position: absolute;
+      top: 83%;
+    }
+    .signup-btn {
+      width: 30vw;
+      position: absolute;
+      top: 78%;
+    }
+    .facebookicon {
+      left: 22%;
+      top: 17%;
+    }
+    .googleicon {
+      left: 27%;
+      top: 17%;
+    }
+  }
   @media screen and (max-width: 767px) {
     .left {
       display: none;
@@ -264,6 +299,76 @@ const Wrapper = styled.article`
     .googleicon {
       left: 27%;
       top: 17%;
+    }
+  }
+  @media screen and (min-width: 540px) and (max-width: 542px) {
+    .facebookicon {
+      left: 30%;
+      top: 17%;
+    }
+    .googleicon {
+      left: 33%;
+      top: 22%;
+    }
+    .goggle-btn {
+      left: 10%;
+      top: 50%;
+    }
+    .facebook-btn {
+      left: 10%;
+      top: 120%;
+    }
+  }
+  @media screen and (min-width: 411px) and (max-width: 413px) {
+    .underline {
+      margin: -1rem auto;
+      width: 70vw;
+      position: absolute;
+      top: 78%;
+    }
+    .signup-btn {
+      width: 30vw;
+      position: absolute;
+      top: 75%;
+    }
+    .facebookicon {
+      left: 24%;
+      top: 17%;
+    }
+    .googleicon {
+      left: 29%;
+      top: 17%;
+    }
+  }
+  @media screen and (max-width: 320px) {
+    .goggle-btn {
+      left: -4%;
+      top: 20%;
+    }
+    .facebook-btn {
+      left: -4%;
+    }
+    .login-btn {
+      margin: 0.45rem auto;
+      width: 60vw;
+    }
+    .facebookicon {
+      left: 18%;
+      top: 17%;
+    }
+    .googleicon {
+      left: 23%;
+      top: 20%;
+    }
+  }
+  @media screen and (max-width: 280px) {
+    .facebookicon {
+      left: 13%;
+      top: 19%;
+    }
+    .googleicon {
+      left: 20%;
+      top: 22%;
     }
   }
 `;
