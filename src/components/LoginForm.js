@@ -10,8 +10,8 @@ import FacebookIcon from "@material-ui/icons/Facebook";
 import { IoLogoGoogle } from "react-icons/io";
 const useStyle = makeStyles((theme) => ({
   boxStyle: {
-    margin: "8rem auto",
-    height: "70vh",
+    margin: "4rem auto",
+    height: "83vh",
     width: "50vw",
     [theme.breakpoints.down("xs")]: {
       width: "80vw",
@@ -21,6 +21,12 @@ const useStyle = makeStyles((theme) => ({
     "@media screen and (max-width : 320px)": {
       height: "85vh",
       margin: "3rem auto",
+    },
+    "@media screen and (min-width: 768px) and (max-width: 769px)": {
+      width: "75vw",
+    },
+    "@media screen and (min-width: 770px ) and (max-width: 1024px )": {
+      width: "70vw",
     },
   },
   background: {
@@ -39,6 +45,12 @@ const useStyle = makeStyles((theme) => ({
       display: "flex",
       flexDirection: "column",
     },
+    "@media screen and (min-width: 768px) and (max-width: 769px)": {
+      width: "60vw",
+    },
+    "@media screen and (min-width: 770px ) and (max-width: 1024px )": {
+      width: "60vw",
+    },
   },
   idInput: {
     marginTop: "30px",
@@ -48,6 +60,12 @@ const useStyle = makeStyles((theme) => ({
       width: "70vw",
       height: "4vh",
     },
+    "@media screen and (min-width: 768px) and (max-width: 769px)": {
+      width: "50vw",
+    },
+    "@media screen and (min-width: 770px ) and (max-width: 1024px )": {
+      width: "40vw",
+    },
   },
   passwordInput: {
     marginTop: "30px",
@@ -55,6 +73,12 @@ const useStyle = makeStyles((theme) => ({
     borderRadius: "20px",
     [theme.breakpoints.down("xs")]: {
       width: "70vw",
+    },
+    "@media screen and (min-width: 768px) and (max-width: 769px)": {
+      width: "50vw",
+    },
+    "@media screen and (min-width: 770px ) and (max-width: 1024px )": {
+      width: "40vw",
     },
   },
   checkBox: {
@@ -73,10 +97,15 @@ const useStyle = makeStyles((theme) => ({
     width: "17vw",
     margin: "2rem auto",
     position: "relative",
-
     [theme.breakpoints.down("xs")]: {
       margin: "-2rem auto",
       marginLeft: "1.2rem",
+    },
+    "@media screen and (min-width: 768px) and (max-width: 769px)": {
+      width: "60vw",
+    },
+    "@media screen and (min-width: 770px ) and (max-width: 1024px )": {
+      width: "50vw",
     },
   },
   signUpBtn: {
@@ -86,6 +115,14 @@ const useStyle = makeStyles((theme) => ({
       alignItems: "center",
       flexDirection: "column",
       justifyContent: "space-around",
+    },
+    "@media screen and (min-width: 768px) and (max-width: 769px)": {
+      width: "80vw",
+    },
+  },
+  loginTypo: {
+    "@media screen and (min-width: 770px ) and (max-width: 1024px )": {
+      marginBottom: "4rem",
     },
   },
 }));
@@ -105,7 +142,9 @@ function LoginForm() {
               />
             </section>
             <section className="right">
-              <Typography variant="h3">Log in</Typography>
+              <Typography variant="h3" className={classes.loginTypo}>
+                Log in
+              </Typography>
               <Box className={classes.loginBox}>
                 <TextField
                   id="standard-basic"
@@ -176,7 +215,7 @@ const Wrapper = styled.article`
     width: 17vw;
     border-radius: 20px;
     padding: 0.55rem;
-    margin-top: 2rem;
+    margin-top: 1.2rem;
     background-color: #8a75ff;
     color: #fff;
     cursor: pointer;
@@ -224,15 +263,16 @@ const Wrapper = styled.article`
     margin-right: 2px;
     margin-top: 1px;
     position: absolute;
-    left: 30%;
+    left: 20%;
     top: 17%;
   }
   .googleicon {
     font-size: 1.1rem;
     position: absolute;
-    left: 35%;
+    left: 25%;
     top: 17%;
   }
+  /* ipad */
   @media screen and (max-width: 769px) {
     .left {
       display: none;
@@ -248,15 +288,16 @@ const Wrapper = styled.article`
       width: 60vw;
     }
     .underline {
-      margin: -1rem auto;
-      width: 70vw;
+      margin: -9rem auto;
+      width: 60vw;
       position: absolute;
       top: 83%;
     }
     .signup-btn {
       width: 30vw;
       position: absolute;
-      top: 78%;
+      top: 70%;
+      left: 36%;
     }
     .facebookicon {
       left: 22%;
@@ -369,6 +410,45 @@ const Wrapper = styled.article`
     .googleicon {
       left: 20%;
       top: 22%;
+    }
+  }
+  /* ipad pro */
+  @media screen and (min-width: 770px) and (max-width: 1024px) {
+    .left {
+      display: none;
+    }
+    .right {
+      margin-bottom: 2;
+    }
+    .login-btn {
+      margin: 1.2rem auto;
+      width: 50vw;
+    }
+    .goggle-btn {
+      width: 50vw;
+    }
+    .facebook-btn {
+      width: 50vw;
+    }
+    .underline {
+      margin: -15rem auto;
+      width: 60vw;
+      position: absolute;
+      top: 83%;
+    }
+    .signup-btn {
+      width: 30vw;
+      position: absolute;
+      top: 69%;
+      left: 35%;
+    }
+    .facebookicon {
+      left: 22%;
+      top: 17%;
+    }
+    .googleicon {
+      left: 27%;
+      top: 17%;
     }
   }
 `;
