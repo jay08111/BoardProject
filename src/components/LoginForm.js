@@ -28,13 +28,24 @@ const useStyle = makeStyles((theme) => ({
     "@media screen and (min-width: 770px ) and (max-width: 1024px )": {
       width: "70vw",
     },
+    "@media screen and (min-height : 360px ) and (max-height :540px)": {
+      width: "70vw",
+      margin: "2rem auto",
+    },
+    "@media screen and (min-height : 320px ) and (max-height : 321px)": {
+      width: "70vw",
+      margin: "1rem auto",
+    },
+    "@media screen and (min-height: 280px) and (max-height: 281px)": {
+      width: "70vw",
+      margin: "1.3rem auto",
+    },
   },
   background: {
     background: "linear-gradient(#96deda , #50c9c3)",
     height: "100vh",
     overflow: "hidden",
     position: "relative",
-    [theme.breakpoints.down("xs")]: {},
   },
   loginBox: {
     width: "20vw",
@@ -51,6 +62,17 @@ const useStyle = makeStyles((theme) => ({
     "@media screen and (min-width: 770px ) and (max-width: 1024px )": {
       width: "60vw",
     },
+    "@media screen and (min-height : 360px ) and (max-height : 540px)": {
+      width: "60vw",
+    },
+    "@media screen and (min-height : 320px ) and (max-height : 321px)": {
+      width: "40vw",
+      margin: "-3rem auto",
+    },
+    "@media screen and (min-height: 280px) and (max-height: 281px)": {
+      margin: "-2rem auto",
+      width: "40vw",
+    },
   },
   idInput: {
     marginTop: "30px",
@@ -66,6 +88,24 @@ const useStyle = makeStyles((theme) => ({
     "@media screen and (min-width: 770px ) and (max-width: 1024px )": {
       width: "40vw",
     },
+    "@media screen and (min-height : 320px ) and (max-height : 321px)": {
+      width: "40vw",
+    },
+    "@media screen and (min-height: 360px) and (max-height: 362px)": {
+      marginRight: "45px",
+    },
+    "@media screen and (min-height: 410px) and (max-height: 411px)": {
+      marginRight: "45px",
+    },
+    "@media screen and (min-height: 375px) and (max-height: 376px)": {
+      marginRight: "45px",
+    },
+    "@media screen and (min-height: 414px) and (max-height: 415px)": {
+      marginRight: "45px",
+    },
+    "@media screen and (min-height: 280px) and (max-height: 281px)": {
+      marginRight: "25px",
+    },
   },
   passwordInput: {
     marginTop: "30px",
@@ -78,6 +118,9 @@ const useStyle = makeStyles((theme) => ({
       width: "50vw",
     },
     "@media screen and (min-width: 770px ) and (max-width: 1024px )": {
+      width: "40vw",
+    },
+    "@media screen and (min-height : 320px ) and (max-height : 321px)": {
       width: "40vw",
     },
   },
@@ -107,6 +150,18 @@ const useStyle = makeStyles((theme) => ({
     "@media screen and (min-width: 770px ) and (max-width: 1024px )": {
       width: "50vw",
     },
+    "@media screen and (min-height : 360px ) and (max-height : 540px)": {
+      display: "none",
+    },
+    "@media screen and (min-height : 320px ) and (max-height : 321px)": {
+      display: "none",
+    },
+    "@media screen and (min-height: 768px) and (max-height: 769px)": {
+      marginTop: "-1.5rem",
+    },
+    "@media screen and (min-height: 280px) and (max-height: 281px)": {
+      display: "none",
+    },
   },
   signUpBtn: {
     margin: "8rem auto",
@@ -123,6 +178,16 @@ const useStyle = makeStyles((theme) => ({
   loginTypo: {
     "@media screen and (min-width: 770px ) and (max-width: 1024px )": {
       marginBottom: "4rem",
+    },
+    "@media screen and (min-height : 360px ) and (max-height : 540px)": {
+      fontSize: "1.4rem",
+      marginBottom: "-3rem",
+    },
+    "@media screen and (min-height : 320px ) and (max-height : 321px)": {
+      fontSize: "1.2rem",
+    },
+    "@media screen and (min-height: 280px) and (max-height: 281px)": {
+      fontSize: "1.2rem",
     },
   },
 }));
@@ -450,6 +515,90 @@ const Wrapper = styled.article`
       left: 27%;
       top: 17%;
     }
+  }
+  @media screen and (min-height: 360px) and (max-height: 362px) {
+    .login-btn {
+      width: 30vw;
+    }
+    .underline {
+      margin-top: -3.2rem;
+      width: 60vw;
+    }
+    .signup-btn {
+      margin: -1rem -0.3rem;
+    }
+  }
+  @media screen and (min-height: 320px) and (max-height: 321px) {
+    .login-btn {
+      width: 20vw;
+      margin-top: 0.7rem;
+    }
+    .underline {
+      display: none;
+    }
+    .signup-btn {
+      margin: -1.2rem 1.4rem;
+      width: 20vw;
+    }
+  }
+  @media screen and (min-height: 375px) and (max-height: 376px) {
+    .login-btn {
+      width: 20vw;
+      margin-top: 0.7rem;
+    }
+    .underline {
+      display: none;
+    }
+    .signup-btn {
+      margin: -4rem 1.7rem;
+      width: 20vw;
+    }
+  }
+  @media screen and (min-height: 410px) and (max-height: 411px) {
+    .login-btn {
+      width: 40vw;
+    }
+    .underline {
+      margin-top: -5rem;
+      width: 60vw;
+    }
+    .signup-btn {
+      margin: -2rem -0.5rem;
+    }
+  }
+  @media screen and (min-height: 414px) and (max-height: 415px) {
+    .login-btn {
+      width: 50vw;
+    }
+    .underline {
+      display: none;
+    }
+    .signup-btn {
+      margin: -4rem -0.5rem;
+    }
+  }
+  @media screen and (min-height: 768px) and (max-height: 769px) {
+    .underline {
+      display: none;
+    }
+    .signup-btn {
+      margin: 4rem 0.15rem;
+    }
+  }
+  @media screen and (min-height: 280px) and (max-height: 281px) {
+    .underline {
+      display: none;
+    }
+    .login-btn {
+      width: 30vw;
+      margin-top: 0rem;
+    }
+    .signup-btn {
+      margin: -1rem -0.38rem;
+    }
+  }
+  @media (orientation: landscape) {
+    height: 80vh;
   }
 `;
 export default LoginForm;
