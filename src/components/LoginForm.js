@@ -97,9 +97,6 @@ const useStyle = makeStyles((theme) => ({
     "@media screen and (min-height: 410px) and (max-height: 411px)": {
       marginRight: "45px",
     },
-    "@media screen and (min-height: 375px) and (max-height: 376px)": {
-      marginRight: "45px",
-    },
     "@media screen and (min-height: 414px) and (max-height: 415px)": {
       marginRight: "45px",
     },
@@ -122,6 +119,9 @@ const useStyle = makeStyles((theme) => ({
     },
     "@media screen and (min-height : 320px ) and (max-height : 321px)": {
       width: "40vw",
+    },
+    "@media screen and (min-height: 375px) and (max-height: 376px)": {
+      marginTop: "0.9rem",
     },
   },
   checkBox: {
@@ -265,7 +265,7 @@ const Wrapper = styled.article`
   }
   .left .img_src {
     height: 100%;
-    width: 100%;
+    max-width: 100%;
     object-fit: cover;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
@@ -544,13 +544,13 @@ const Wrapper = styled.article`
   @media screen and (min-height: 375px) and (max-height: 376px) {
     .login-btn {
       width: 20vw;
-      margin-top: 0.7rem;
+      margin-top: -1rem;
     }
     .underline {
       display: none;
     }
     .signup-btn {
-      margin: -4rem 1.7rem;
+      margin: 1.6rem 2.5rem;
       width: 20vw;
     }
   }
@@ -568,7 +568,7 @@ const Wrapper = styled.article`
   }
   @media screen and (min-height: 414px) and (max-height: 415px) {
     .login-btn {
-      width: 50vw;
+      width: 30vw;
     }
     .underline {
       display: none;
