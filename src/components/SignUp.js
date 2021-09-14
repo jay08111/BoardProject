@@ -13,7 +13,7 @@ const useStyle = makeStyles((theme) => ({
   boxStyle: {
     margin: "4rem auto",
     height: "83vh",
-    width: "50vw",
+    width: "60vw",
     [theme.breakpoints.down("xs")]: {
       width: "80vw",
     },
@@ -22,6 +22,7 @@ const useStyle = makeStyles((theme) => ({
     },
   },
   title: {
+    marginTop: "1rem",
     textAlign: "center",
   },
   content: {
@@ -39,10 +40,22 @@ const useStyle = makeStyles((theme) => ({
   },
   textBox: {
     [theme.breakpoints.down("xs")]: {
-      width: "14rem",
+      width: "10rem",
+    },
+    [theme.breakpoints.down("md")]: {
+      width: "15rem",
+      display: "flex",
+    },
+    "@media screen and (min-width: 1024px)": {
+      width: "26rem",
+      display: "flex",
     },
     "@media screen and (max-width: 320px)": {
       display: "flex",
+    },
+    "@media screen and (max-width: 280px)": {
+      display: "flex",
+      width: "13rem",
     },
   },
 }));
@@ -148,20 +161,50 @@ const Wrapper = styled.article`
     background-color: #fff;
     cursor: pointer;
   }
-
-  @media screen and (min-width: 20em) and (max-width: 765px) {
+  @media screen and (min-width: 360px) and (max-width: 767px) {
     .left {
       display: none;
     }
+    .zipcode-input {
+      width: 37vw;
+    }
+    .zip-code {
+      font-size: 0.8rem;
+      padding: 0;
+      width: 20vw;
+    }
   }
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    .zipcode-input {
+      width: 37vw;
+    }
+    .zip-code {
+      font-size: 0.8rem;
+      padding: 0;
+      width: 20vw;
+    }
+  }
+  @media screen and (min-width: 1024px) {
+    .zipcode-input {
+      width: 37vw;
+    }
+    .zip-code {
+      font-size: 0.8rem;
+      padding: 0;
+      width: 20vw;
+    }
+  }
+
   @media screen and (max-width: 320px) {
+    .left {
+      display: none;
+    }
     .zipcode-input {
       width: 40vw;
     }
     .zip-code {
-      font-size: 1rem;
+      font-size: 0.7rem;
       padding: 0;
-      background-color: gray;
       width: 20vw;
     }
   }

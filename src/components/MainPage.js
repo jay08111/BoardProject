@@ -14,8 +14,14 @@ function MainPage() {
   return (
     <main>
       <NavBar>
-        <Link to="/login">login</Link>
-        <Link to="/signup">sign-Up</Link>
+        <div className="btn-container">
+          <Link to="/login" className="btn login-btn">
+            login
+          </Link>
+          <Link to="/signup" className="btn sign-btn">
+            Sign-Up
+          </Link>
+        </div>
       </NavBar>
       <Box className={classes.boxModel}>
         <Typography variant="h2">The Main Page</Typography>
@@ -30,6 +36,16 @@ const NavBar = styled.nav`
   background-color: #e5bd90;
   display: flex;
   justify-content: flex-start;
+  .btn-container {
+    margin: auto 1rem;
+  }
+  .btn {
+    text-transform: capitalize;
+    margin-left: 3rem;
+    font-size: 1.4rem;
+    text-decoration: none;
+    color: #544231;
+  }
 `;
 
 export default MainPage;

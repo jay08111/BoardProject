@@ -12,7 +12,7 @@ const useStyle = makeStyles((theme) => ({
   boxStyle: {
     margin: "4rem auto",
     height: "83vh",
-    width: "50vw",
+    width: "60vw",
     [theme.breakpoints.down("xs")]: {
       width: "80vw",
       height: "80vh",
