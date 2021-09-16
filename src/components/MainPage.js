@@ -46,6 +46,9 @@ const NavBar = styled.nav`
     text-decoration: none;
     color: #544231;
   }
+  @media screen and (min-width: 280px) and (max-width: 414px) {
+    justify-content: flex-end;
+  }
 `;
 
 export default MainPage;

@@ -103,7 +103,7 @@ function SignUp() {
                   <input type="text" className="input-field zipcode-input" />
                   <button className="zip-code">우편번호 검색</button>
                 </Box>
-                <input type="text" className="input-field " />
+                <input type="text" className="input-field" />
                 <Box className={classes.buttonBox}>
                   <button className="sign-up">회원가입</button>
                   <button className="clear">초기화</button>
@@ -161,17 +161,46 @@ const Wrapper = styled.article`
     background-color: #fff;
     cursor: pointer;
   }
+  @media screen and (max-width: 359px) {
+    .left {
+      display: none;
+    }
+  }
+
   @media screen and (min-width: 360px) and (max-width: 767px) {
     .left {
       display: none;
     }
     .zipcode-input {
       width: 37vw;
+      height: 5vh;
+    }
+    .zip-code {
+      font-size: 0.9rem;
+      padding: 0;
+      height: 2vh;
+    }
+  }
+  @media screen and (min-width: 375px) and (max-width: 376px) {
+    .zipcode-input {
+      width: 37vw;
+      height: 4vh;
+    }
+    .zip-code {
+      font-size: 0.7rem;
+      padding: 0;
+      height: 2vh;
+    }
+  }
+  @media screen and (min-width: 540px) and (max-width: 541px) {
+    .zipcode-input {
+      width: 39vw;
+      height: 4vh;
     }
     .zip-code {
       font-size: 0.8rem;
       padding: 0;
-      width: 20vw;
+      height: 2vh;
     }
   }
   @media screen and (min-width: 768px) and (max-width: 1023px) {
@@ -213,6 +242,11 @@ const Wrapper = styled.article`
   @media screen and (max-width: 280px) {
     .left {
       display: none;
+    }
+    .zip-code {
+      font-size: 0.8rem;
+      padding: 0;
+      width: 20vw;
     }
   }
 `;
