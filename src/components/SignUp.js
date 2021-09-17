@@ -20,6 +20,14 @@ const useStyle = makeStyles((theme) => ({
     [theme.breakpoints.down("md")]: {
       width: "90vw",
     },
+    "@media screen and (min-height: 360px) and (max-height: 411px)": {
+      margin: "0.5rem auto",
+      height: "95vh",
+    },
+    "@media screen and (max-height: 320px)": {
+      margin: "0 auto",
+      height: "100vh",
+    },
   },
   title: {
     marginTop: "1rem",
@@ -31,6 +39,13 @@ const useStyle = makeStyles((theme) => ({
     height: "60vh",
     flexDirection: "column",
     justifyContent: "space-around",
+    "@media screen and (min-height: 360px) and (max-height: 411px)": {
+      height: "70vh",
+    },
+    "@media screen and (max-height: 320px)": {
+      height: "72vh",
+      display: "inline-block",
+    },
   },
   buttonBox: {
     margin: "0 auto",
@@ -101,7 +116,9 @@ function SignUp() {
                 />
                 <Box className={classes.textBox}>
                   <input type="text" className="input-field zipcode-input" />
-                  <button className="zip-code">우편번호 검색</button>
+                  <div className="zip-btn">
+                    <button className="zip-code">우편번호 검색</button>
+                  </div>
                 </Box>
                 <input type="text" className="input-field" />
                 <Box className={classes.buttonBox}>
@@ -203,6 +220,13 @@ const Wrapper = styled.article`
       height: 2vh;
     }
   }
+  @media screen and (min-width: 360px) and (max-width: 361px) {
+    .zip-code {
+      font-size: 0.85rem;
+      padding: 0;
+      height: 2vh;
+    }
+  }
   @media screen and (min-width: 768px) and (max-width: 1023px) {
     .zipcode-input {
       width: 37vw;
@@ -247,6 +271,54 @@ const Wrapper = styled.article`
       font-size: 0.8rem;
       padding: 0;
       width: 20vw;
+    }
+  }
+  @media screen and (max-height: 540px) {
+    .zip-btn {
+      margin-top: 0.3rem;
+    }
+    .zip-code {
+      font-size: 1rem;
+      padding: 0;
+      width: 20vw;
+    }
+  }
+  @media screen and (min-height: 360px) and (max-height: 411px) {
+    .right {
+      margin: -1rem 0;
+    }
+    .zip-code {
+      font-size: 0.8rem;
+      padding: 0;
+      width: 20vw;
+    }
+    .zipcode-input {
+      width: 37vw;
+      height: 8vh;
+    }
+    .left {
+      display: none;
+    }
+  }
+  @media screen and (max-height: 320px) {
+    .right {
+      margin: -1rem 0;
+    }
+    .zip-code {
+      font-size: 1rem;
+      padding: 0;
+      width: 20vw;
+    }
+    .zipcode-input {
+      width: 37vw;
+      height: 8vh;
+    }
+    .input-field {
+      width: 35vw;
+      margin: 0.45rem;
+    }
+    .zip-btn {
+      margin-top: 0.6rem;
     }
   }
 `;
