@@ -52,6 +52,11 @@ const useStyle = makeStyles((theme) => ({
     display: "flex",
     justifyContent: "space-around",
     width: "12rem",
+    "@media screen and (max-height:280px)": {
+      position: "absolute",
+      top: "225px",
+      left: "365px",
+    },
   },
   textBox: {
     [theme.breakpoints.down("xs")]: {
@@ -71,6 +76,9 @@ const useStyle = makeStyles((theme) => ({
     "@media screen and (max-width: 280px)": {
       display: "flex",
       width: "13rem",
+    },
+    "@media screen and (max-height:280px)": {
+      position: "relative",
     },
   },
 }));
@@ -117,13 +125,19 @@ function SignUp() {
                 <Box className={classes.textBox}>
                   <input type="text" className="input-field zipcode-input" />
                   <div className="zip-btn">
-                    <button className="zip-code">우편번호 검색</button>
+                    <button className="zip-code" type="submit">
+                      우편번호 검색
+                    </button>
                   </div>
                 </Box>
                 <input type="text" className="input-field" />
                 <Box className={classes.buttonBox}>
-                  <button className="sign-up">회원가입</button>
-                  <button className="clear">초기화</button>
+                  <button className="sign-up" type="submit">
+                    회원가입
+                  </button>
+                  <button className="clear" type="submit">
+                    초기화
+                  </button>
                 </Box>
               </Box>
             </section>
@@ -192,8 +206,11 @@ const Wrapper = styled.article`
       width: 37vw;
       height: 5vh;
     }
+    .zip-btn {
+      width: 10vw;
+    }
     .zip-code {
-      font-size: 0.9rem;
+      font-size: 0.4rem;
       padding: 0;
       height: 2vh;
     }
@@ -214,8 +231,11 @@ const Wrapper = styled.article`
       width: 39vw;
       height: 4vh;
     }
+    .zip-btn {
+      width: 20vw;
+    }
     .zip-code {
-      font-size: 0.8rem;
+      font-size: 1rem;
       padding: 0;
       height: 2vh;
     }
@@ -242,7 +262,7 @@ const Wrapper = styled.article`
       width: 37vw;
     }
     .zip-code {
-      font-size: 0.8rem;
+      font-size: 1.2rem;
       padding: 0;
       width: 20vw;
     }
@@ -271,6 +291,15 @@ const Wrapper = styled.article`
       font-size: 0.8rem;
       padding: 0;
       width: 20vw;
+    }
+  }
+  @media screen and (max-height: 1024px) {
+    .zip-btn {
+      width: 30vw;
+    }
+    .zip-code {
+      font-size: 1rem;
+      width: 10vw;
     }
   }
   @media screen and (max-height: 540px) {
@@ -319,6 +348,20 @@ const Wrapper = styled.article`
     }
     .zip-btn {
       margin-top: 0.6rem;
+    }
+  }
+  @media screen and (max-height: 280px) {
+    .zip-code {
+      font-size: 0.84rem;
+      padding: 0;
+      width: 20vw;
+    }
+    .zip-btn {
+      margin-top: 0.4rem;
+    }
+    .zipcode-input {
+      width: 37vw;
+      height: 9vh;
     }
   }
 `;
